@@ -31,7 +31,7 @@ function NavScrollExample() {
               placeholder="Type the product name"
               className="sm"
               aria-label="Search"
-              style={{background:'rgba(0,0,0,0)',borderRadius:'10px 0px 0px 10px',borderColor:'black'}}
+              style={{background:'rgba(255,255,255,1)',borderRadius:'10px 0px 0px 10px',borderColor:'black'}}
 
             />
             <Button style={{background:'rgb(254, 190, 71)',borderRadius:'0px 10px 10px 0px',borderColor:'black',color:'black'}}>Search</Button>
