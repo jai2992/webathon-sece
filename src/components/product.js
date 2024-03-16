@@ -40,7 +40,7 @@ const Product = ({ id }) => {
             bottom: '5%',
             right: '5%',
             padding: '5px 10px',
-            borderRadius: '10px 0px 0px 0px',
+            borderRadius: '10px 0px 10px 0px',
             backgroundColor: 'rgba(255, 255, 255, 0.8)',
             color: 'black',
             border: 'none',

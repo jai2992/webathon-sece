@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 function NavScrollExample() {
   return (
     <Navbar expand="lg" style={{borderRadius:'0px 0px 30px 30px',paddingLeft:'50px',paddingRight:'50px'}}>
-      <Container fluid>
+      <Container fluid >
         <Navbar.Brand as={Link} to="/" style={{fontWeight:'bolder'}}>SECE AMINITY</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">

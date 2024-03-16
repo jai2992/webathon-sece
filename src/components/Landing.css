@@ -1,4 +1,6 @@
-
+.Nav{
+  background-color: black;
+}
 .land {
     display: flex;
     justify-content: center;

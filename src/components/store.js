@@ -7,6 +7,7 @@ export default function store() {
   return (
     <div>
     <Nav/>
+    <br/><br/>
     <h2 style={{margin:'30px 30px 30px 50px',fontWeight:'bolder'}}>Stationary</h2>
     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px', padding: '0px',alignSelf:'center',marginLeft:'50px', marginRight:'200px'}}>
         <Productbar id="1"/>
