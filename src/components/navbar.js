@@ -5,6 +5,8 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import './navbar.css'
+import { Link } from 'react-router-dom';
+
 function NavScrollExample() {
   return (
     <Navbar expand="lg" className="bg-body-tertiary" >
@@ -17,11 +19,11 @@ function NavScrollExample() {
             style={{ maxHeight: '100px',fontWeight:'bold' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Store</Nav.Link>
-            <Nav.Link href="#action2">Saloon</Nav.Link>
-            <Nav.Link href="#action2">Food Court</Nav.Link>
-            <Nav.Link href="#action2">Cart</Nav.Link>
+            <Nav.Link as={Link} to="/">Home</Nav.Link>
+            <Nav.Link as={Link} to="/store">Store</Nav.Link>
+            <Nav.Link as={Link} to="/saloon">Saloon</Nav.Link>
+            <Nav.Link as={Link} to="/foodcourt">Food Court</Nav.Link>
+            <Nav.Link as={Link} to="/cart">Cart</Nav.Link>
           </Nav>
           <Form className="d-flex">
             <Form.Control

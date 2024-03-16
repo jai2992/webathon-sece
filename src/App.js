@@ -1,16 +1,21 @@
-
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import BillComponent from './components/bill';
-import CustomNavbar from './components/navbar';
-import Productbar from './components/product';
-import Navbar from './components/rajnav';
-import Cart from './components/cart';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Store from './components/store';
+import Food from './components/Food_court'
+import Landing from './components/Landing';
 
 function App() {
   return (
     <div>
-        <Cart/>
+    <Router>
+      <Routes>
+        <Route path="" element={<Landing />} />
+        <Route path="/" element={<Landing />} />
+        <Route path="/foodcourt" element={<Food />} />
+        <Route path="/store" element={<Store />} />
+      </Routes>
+    </Router>
     </div>
   );
 }
