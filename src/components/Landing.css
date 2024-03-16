@@ -6,6 +6,7 @@
     position: relative;
     height: 100vh;
     background: url('./background.png') center/cover fixed;
+    background-color: rgba(0, 0, 0, 0.5);
   }
   
   .land::after {
@@ -15,27 +16,29 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Black mask with 50% opacity */
-    z-index: 1; /* Place the mask behind other content */
+    background-color: rgba(0, 0, 0, 0.7); /* Black mask with 50% opacity */
+    z-index: 0; /* Place the mask behind other content */
   }
   
   .land .title {
     position: relative; /* Ensure the text is on top of the mask */
     text-align: center;
-    color: white; /* Bright text color */
+    color: rgb(255, 153, 0); /* Bright text color */
     font-size: 2em; /* Adjust the font size as needed */
     z-index: 2;
     font-weight: bolder;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 60px;
+    z-index: 10;
   }
   .container {
     text-align: center;
     margin-top: 50px; /* Adjust as needed */
+    z-index: 10;
   }
   
   .center-heading {
-    font-size: 24px;
+    font-size: 48px;
     font-weight: bold;
   }
   
@@ -44,6 +47,7 @@
     justify-content: space-around;
     margin-top: 20px; /* Adjust as needed */
     margin-left: 30px;
+    
   }
   
   .circle {
@@ -54,11 +58,11 @@
     width: 200px; /* Adjust as needed */
     height: 200px; /* Adjust as needed */
     border-radius: 50%;
-    margin-bottom: 20px; /* Adjust as needed */
+    margin-bottom: 50px; /* Adjust as needed */
     border: 4px solid orange;
   }
   
   .circle p {
     margin: 0;
+    font-size: 20px;
   }
-  

@@ -3,7 +3,6 @@ import Nav from './navbar'
 import './Landing.css'
 import Productbar from './product'
 import Footer from './footer'
-import { MDBFooter, MDBContainer, MDBBtn, MDBIcon } from 'mdb-react-ui-kit';
 
 
 export default function Landing() {
@@ -16,7 +15,7 @@ export default function Landing() {
         <div>
         <div className="container">
       <h4 className="center-heading">Our Products</h4>
-      <br/> <br/>
+      <br/> <br/><br/> <br/>
       
       
       <div className="circle-container">
@@ -32,16 +31,23 @@ export default function Landing() {
         </div>
         <div className="circle">
           <img src="https://media.istockphoto.com/id/485725200/photo/school-and-office-accessories-on-wooden-background.jpg?b=1&s=612x612&w=0&k=20&c=ZPKbyKvfLH_xgHYxhXaPKz-lBJxT5g2g04jZFx4LHXk=" alt="Image 3" />
-          <p>From notes to novel,<br/> let your words find their home...</p>
+          <p>From notes to novel,<br/> let your words find home...</p>
         </div>
       </div>
     </div>
-    <div className="container">
+    <br/> <br/><br/> <br/>
+    <br/>
+    <div class='land'>
+    <div className="container" style={{color:'orange'}}>
     <h4 className="center-heading">Frequently Ordered Items</h4>
-    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '30px', padding: '50px',alignContent:'center',marginLeft:'80px', marginRight:'200px'}}>
+    <br/> <br/><br/> <br/>
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '30px', padding: '50px',alignContent:'center',marginLeft:'100px', marginRight:'200px',zIndex:'100'}}>
         <Productbar id="1"/>
         <Productbar id="1"/>
     </div>
+    </div>
+    <br/> <br/><br/> <br/>
+
     </div>
 
     </div>

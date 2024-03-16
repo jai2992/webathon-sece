@@ -20,7 +20,7 @@ const Product = ({ id }) => {
   }, [id]);
 
   return (
-    <div style={{ width: '400px', height: '200px', display: 'flex', boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px', borderRadius: '10px' }}>
+    <div style={{ width: '400px', height: '200px', display: 'flex', boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',background:'rgba(255,255,255,0.9)', borderRadius: '10px',zIndex:'1' }}>
       <div style={{ flex: '1', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '10px' }}>
         <div>
           <h4 style={{ paddingTop: '5px', padding: '5px 5px' }}>{product?.name}</h4>
