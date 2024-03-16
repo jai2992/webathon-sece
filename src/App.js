@@ -6,9 +6,8 @@ import Food from './components/Food_court'
 import Landing from './components/Landing';
 import Saloon from './components/Saloon';
 import Cart from './components/cart';
-import PasswordLoginWithFirebase from './components/PasswordLoginWithFirebase';
-import FoodCourt from './components/Food_court';
-
+import Signin from './components/signin';
+import Signup from './components/signup';
 
 function App() {
   return (
@@ -16,8 +15,11 @@ function App() {
     <div>
     <Router>
       <Routes>
-        <Route path="" element={<Landing />} />
-        <Route path="/" element={<Landing />} />
+        <Route path="" element={<Signin />} />
+        <Route path="/" element={<Signin />} />
+        <Route path="/Signin" element={<Signin />} />
+        <Route path="/Signup" element={<Signup />} />
+        <Route path="/land" element={<Landing />} />
         <Route path="/foodcourt" element={<Food/>} />
         <Route path="/store" element={<Store />} />
         <Route path="/saloon" element={<Saloon />} />

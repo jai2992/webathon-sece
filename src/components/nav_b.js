@@ -11,7 +11,7 @@ function NavScrollExample() {
   return (
     <Navbar expand="lg" style={{borderRadius:'0px 0px 30px 30px',paddingLeft:'50px',paddingRight:'50px'}}>
       <Container fluid >
-        <Navbar.Brand as={Link} to="/land" style={{fontWeight:'bolder'}}>SECE AMINITY</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/" style={{fontWeight:'bolder'}}>SECE AMINITY</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -19,7 +19,7 @@ function NavScrollExample() {
             style={{ maxHeight: '100px',fontWeight:'bold',paddingLeft:'30px',color:'black' }}
             navbarScroll
           >
-            <Nav.Link as={Link} to="/land" style={{paddingRight:'20px'}}>Home</Nav.Link>
+            <Nav.Link as={Link} to="/" style={{paddingRight:'20px'}}>Home</Nav.Link>
             <Nav.Link as={Link} to="/store" style={{paddingRight:'20px'}}>Store</Nav.Link>
             <Nav.Link as={Link} to="/saloon" style={{paddingRight:'20px'}}>Saloon</Nav.Link>
             <Nav.Link as={Link} to="/foodcourt" style={{paddingRight:'20px'}}>Food Court</Nav.Link>
@@ -37,12 +37,12 @@ function NavScrollExample() {
             <Button style={{background:'rgb(254, 190, 71)',borderRadius:'0px 10px 10px 0px',borderColor:'black',color:'black'}}>Search</Button>
           </Form>
           <div className="d-flex align-items-center ms-2">
-            <img
+            {/* <img
                 src="https://via.placeholder.com/30"
                 alt="user"
                 className="rounded-circle me-2"
-            />
-            <span className='user'>User Name</span>
+            /> */}
+            <span className='user'>Sign in / Sign up</span>
             </div>
         </Navbar.Collapse>
       </Container>
