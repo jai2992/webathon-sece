@@ -1,0 +1,37 @@
+.land {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    background: url('./background.png') center/cover fixed;
+  }
+  
+  .land::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black mask with 50% opacity */
+    z-index: 1; /* Place the mask behind other content */
+  }
+  
+  .land .title {
+    position: relative; /* Ensure the text is on top of the mask */
+    text-align: center;
+    color: white; /* Bright text color */
+    font-size: 2em; /* Adjust the font size as needed */
+    z-index: 2;
+    font-weight: bolder;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 60px;
+  }
+  /* .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it's above other content */
+  /* }  */
+  

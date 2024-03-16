@@ -9,8 +9,8 @@ import { Link } from 'react-router-dom';
 
 function NavScrollExample() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary" >
-      <Container fluid rounded style={{ backgroundColor : '#FFA500',paddingTop:5,paddingBottom:5 }}>
+    <Navbar expand="lg" >
+      <Container fluid style={{ backgroundColor : '#FFA500',paddingTop:5,paddingBottom:5 }}>
         <Navbar.Brand href="#" style={{fontWeight:'bolder'}}>SECE AMINITY</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
