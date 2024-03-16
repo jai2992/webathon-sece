@@ -1,6 +1,7 @@
 import React from 'react'
 import Productbar from './product';
 import Nav from './navbar'
+import Footer from './footer';
 
 export default function store() {
   return (
@@ -33,6 +34,8 @@ export default function store() {
         <Productbar id="1"/>
         <Productbar id="1"/>
     </div>
+    <br/><br/><br/>
+    <Footer/>
     </div>
   )
 }

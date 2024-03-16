@@ -108,7 +108,7 @@ const Footer = () => {
                 
 			</FooterContainer>
             <div className="foot-btm">
-            <p className="footer-copyright" style={{paddingTop:'10px'}}>&copy; 2024 RJ and Co.</p>
+            <p className="footer-copyright" style={{paddingTop:'3px'}}>&copy; 2024 RJ and Co.</p>
             </div>
 		</Box>
 	);

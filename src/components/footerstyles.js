@@ -13,12 +13,12 @@ export const Box = styled.div`
 		// padding: 70px 30px;
 	}
   .foot-btm{
-    width:100%;
-    background: rgb(0,0,0);
+    height:30px;
+    background: orange;
     display:flex;
     flex-direction: column;
     align-items: center;
-    color:rgb(255,255,255,0.5)
+    color:rgb(255,255,255,0.7)
   }
 `;
 
