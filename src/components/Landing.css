@@ -1,3 +1,4 @@
+
 .land {
     display: flex;
     justify-content: center;
@@ -28,10 +29,36 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 60px;
   }
-  /* .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000; /* Ensure it's above other content */
-  /* }  */
+  .container {
+    text-align: center;
+    margin-top: 50px; /* Adjust as needed */
+  }
+  
+  .center-heading {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .circle-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px; /* Adjust as needed */
+    margin-left: 30px;
+  }
+  
+  .circle {
+    text-align: center;
+  }
+  
+  .circle img {
+    width: 200px; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
+    border-radius: 50%;
+    margin-bottom: 20px; /* Adjust as needed */
+    border: 4px solid orange;
+  }
+  
+  .circle p {
+    margin: 0;
+  }
   
