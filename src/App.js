@@ -1,16 +1,17 @@
-
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import BillComponent from './components/bill';
-import CustomNavbar from './components/navbar';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Store from './components/store';
 
 function App() {
   return (
     <div>
-      <CustomNavbar/>
-      <Store/>
-      <BillComponent/>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Store />} />
+        <Route path="" element={<Store />} />
+      </Routes>
+    </Router>
     </div>
   );
 }
