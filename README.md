@@ -1,70 +1,119 @@
-# Getting Started with Create React App
+# Amenity Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is an Amenity Management System website built with ReactJS and Firebase. It includes features for managing a store, food court, and salon.
 
-## Available Scripts
+## SCREENSHOTS
 
-In the project directory, you can run:
+![Screenshot 2024-03-17 150252](https://github.com/jai2992/webathon-sece/assets/136327019/6ecb8ed5-9cf6-4ad1-995c-f914f072734f)
 
-### `npm start`
+*landing page*
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![Screenshot 2024-03-17 150319](https://github.com/jai2992/webathon-sece/assets/136327019/2db686a3-420e-4fdc-a161-a9c518274ad2)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+*signin page*
 
-### `npm test`
+![Screenshot 2024-03-17 150328](https://github.com/jai2992/webathon-sece/assets/136327019/2d7f162a-0cda-4234-b843-d27768d6dac5)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+*signup page*
 
-### `npm run build`
+![Screenshot 2024-03-17 150445](https://github.com/jai2992/webathon-sece/assets/136327019/9989786e-b334-410c-86fb-66a3c80c45fc)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+*home page*
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Screenshot 2024-03-17 150603](https://github.com/jai2992/webathon-sece/assets/136327019/d826c73a-2caa-4edc-a95d-ae3d40130b98)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+*home page*
 
-### `npm run eject`
+![Screenshot 2024-03-17 150556](https://github.com/jai2992/webathon-sece/assets/136327019/9ca4653e-8690-4af0-b460-47d88aa3d44a)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+*home page*
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![Screenshot 2024-03-17 150530](https://github.com/jai2992/webathon-sece/assets/136327019/648c7808-470f-433f-b516-c308c84eac30)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+*store*
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![Screenshot 2024-03-17 150539](https://github.com/jai2992/webathon-sece/assets/136327019/7c1ff4ff-6762-4f4b-997f-9278ecc99d70)
 
-## Learn More
+*saloon*
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![Screenshot 2024-03-17 152224](https://github.com/jai2992/webathon-sece/assets/136327019/fea30bbb-d93a-4589-b898-cdbecb7f1141)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+*food court*
 
-### Code Splitting
+![Screenshot 2024-03-17 150631](https://github.com/jai2992/webathon-sece/assets/136327019/0cd92f57-930b-49b3-a1f6-179d9f6e7e30)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+*cart*
 
-### Analyzing the Bundle Size
+# Amenity Management System
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+This project is an Amenity Management System website built with ReactJS and Firebase. It includes features for managing a store, food court, and salon.
 
-### Making a Progressive Web App
+## Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Landing Page: A welcoming page introducing the website and its amenities.
+- Sign In: Allows users to sign in to their accounts.
+- Home: Displays information and options for the user's current location or amenity.
+- Store: Displays products available for purchase.
+- Food Court: Displays food options available for ordering.
+- Saloon: Displays services offered by the salon.
+- Cart: Allows users to view and manage items in their cart.
 
-### Advanced Configuration
+## Technologies Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- ReactJS: Frontend development framework.
+- Firebase: Backend services for authentication, database, and hosting.
+- HTML/CSS: For structure and styling.
+- JavaScript: Programming language for frontend logic.
 
-### Deployment
+## Setup Instructions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+1. Clone the repository.
+2. Install dependencies using `npm install`.
+3. Configure Firebase:
+   - Create a Firebase project and enable authentication and Firestore.
+   - Add Firebase configuration to the project.
+4. Run the project using `npm start`.
 
-### `npm run build` fails to minify
+## Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- `public/`: Contains static files.
+- `src/`: Contains React components and logic.
+  - `components/`: Contains reusable UI components.
+  - `pages/`: Contains pages for different sections of the website.
+  - `services/`: Contains Firebase configuration and helper functions.
+
+
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+- Landing Page: A welcoming page introducing the website and its amenities.
+- Sign In: Allows users to sign in to their accounts.
+- Home: Displays information and options for the user's current location or amenity.
+- Store: Displays products available for purchase.
+- Food Court: Displays food options available for ordering.
+- Saloon: Displays services offered by the salon.
+- Cart: Allows users to view and manage items in their cart.
+
+## Technologies Used
+
+- ReactJS: Frontend development framework.
+- Firebase: Backend services for authentication, database, and hosting.
+- HTML/CSS: For structure and styling.
+- JavaScript: Programming language for frontend logic.
+
+## Setup Instructions
+
+1. Clone the repository.
+2. Install dependencies using `npm install`.
+3. Configure Firebase:
+   - Create a Firebase project and enable authentication and Firestore.
+   - Add Firebase configuration to the project.
+4. Run the project using `npm start`.
+
+Contributions are welcome! Please fork the repository and submit a pull request with your changes.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
