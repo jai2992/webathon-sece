@@ -19,11 +19,11 @@ function NavScrollExample() {
             style={{ maxHeight: '100px',fontWeight:'bold',paddingLeft:'30px',color:'black' }}
             navbarScroll
           >
-            <Nav.Link as={Link} to="/" style={{paddingRight:'20px'}}>Home</Nav.Link>
-            <Nav.Link as={Link} to="/store" style={{paddingRight:'20px'}}>Store</Nav.Link>
-            <Nav.Link as={Link} to="/saloon" style={{paddingRight:'20px'}}>Saloon</Nav.Link>
-            <Nav.Link as={Link} to="/foodcourt" style={{paddingRight:'20px'}}>Food Court</Nav.Link>
-            <Nav.Link as={Link} to="/cart" style={{paddingRight:'20px'}}>Cart</Nav.Link>
+            <Nav.Link as={Link} to="/signin" style={{paddingRight:'20px'}}>Home</Nav.Link>
+            <Nav.Link as={Link} to="/signin" style={{paddingRight:'20px'}}>Store</Nav.Link>
+            <Nav.Link as={Link} to="/signin" style={{paddingRight:'20px'}}>Saloon</Nav.Link>
+            <Nav.Link as={Link} to="/signin" style={{paddingRight:'20px'}}>Food Court</Nav.Link>
+            <Nav.Link as={Link} to="/signin" style={{paddingRight:'20px'}}>Cart</Nav.Link>
           </Nav>
           <Form className="d-flex" style={{paddingRight:'20px',fontWeight:'bold'}}>
             <Form.Control
@@ -42,7 +42,7 @@ function NavScrollExample() {
                 alt="user"
                 className="rounded-circle me-2"
             /> */}
-            <span className='user'>Sign in / Sign up</span>
+            <Nav.Link className='user' as={Link} to="/signin">Sign in / Sign up</Nav.Link>
             </div>
         </Navbar.Collapse>
       </Container>
