@@ -17,6 +17,7 @@ import { useState, useEffect } from 'react';
 import CartItem from './cart_item';
 import { db } from './firebase';
 import { collection, getDocs , deleteDoc} from 'firebase/firestore';
+import BillComponent from "./bill";
 
 export default function Basic() {
     const [cartItems, setCartItems] = useState([]);
@@ -162,6 +163,7 @@ return (
                         </span>
                         </div> */}
                     </button>
+                    <BillComponent/>
                     </MDBCardBody>
                 </MDBCard>
                 </MDBContainer>
