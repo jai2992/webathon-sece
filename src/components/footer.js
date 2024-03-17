@@ -1,5 +1,3 @@
-// Filename - components/Footer.js
-
 import React from "react";
 import {
 	Box,
@@ -17,99 +15,53 @@ const Footer = () => {
 				<Row>
 					<Column>
 						<Heading>About Us</Heading>
-						<FooterLink href="#">
-							Aim
-						</FooterLink>
-						<FooterLink href="#">
-							Vision
-						</FooterLink>
-						<FooterLink href="#">
-							Testimonials
-						</FooterLink>
+						<FooterLink href="#">Our Story</FooterLink>
+						<FooterLink href="#">Mission</FooterLink>
+						<FooterLink href="#">Team</FooterLink>
 					</Column>
 					<Column>
 						<Heading>Services</Heading>
-						<FooterLink href="#">
-							Writing
-						</FooterLink>
-						<FooterLink href="#">
-							Internships
-						</FooterLink>
-						<FooterLink href="#">
-							Coding
-						</FooterLink>
-						<FooterLink href="#">
-							Teaching
-						</FooterLink>
+						<FooterLink href="#">Haircut</FooterLink>
+						<FooterLink href="#">Hair Coloring</FooterLink>
+						<FooterLink href="#">Facial</FooterLink>
 					</Column>
 					<Column>
 						<Heading>Contact Us</Heading>
-						<FooterLink href="#">
-							Uttar Pradesh
-						</FooterLink>
-						<FooterLink href="#">
-							Ahemdabad
-						</FooterLink>
-						<FooterLink href="#">
-							Indore
-						</FooterLink>
-						<FooterLink href="#">
-							Mumbai
-						</FooterLink>
+						<FooterLink href="#">Coimbatore</FooterLink>
+						<FooterLink href="#">Kinathukadavu</FooterLink>
+						<FooterLink href="#">Pollachi</FooterLink>
 					</Column>
 					<Column>
 						<Heading>Social Media</Heading>
 						<FooterLink href="#">
 							<i className="fab fa-facebook-f">
-								<span
-									style={{
-										marginLeft: "10px",
-									}}
-								>
+								<span style={{ marginLeft: "10px" }}>
 									Facebook
 								</span>
 							</i>
 						</FooterLink>
 						<FooterLink href="#">
 							<i className="fab fa-instagram">
-								<span
-									style={{
-										marginLeft: "10px",
-									}}
-								>
+								<span style={{ marginLeft: "10px" }}>
 									Instagram
 								</span>
 							</i>
 						</FooterLink>
 						<FooterLink href="#">
 							<i className="fab fa-twitter">
-								<span
-									style={{
-										marginLeft: "10px",
-									}}
-								>
+								<span style={{ marginLeft: "10px" }}>
 									Twitter
-								</span>
-							</i>
-						</FooterLink>
-						<FooterLink href="#">
-							<i className="fab fa-youtube">
-								<span
-									style={{
-										marginLeft: "10px",
-									}}
-								>
-									Youtube
 								</span>
 							</i>
 						</FooterLink>
 					</Column>
 				</Row>
-                
 			</FooterContainer>
-            <div className="foot-btm">
-            <p className="footer-copyright" style={{paddingTop:'3px'}}>&copy; 2024 RJ and Co.</p>
-            </div>
+			<div className="foot-btm">
+				<p className="footer-copyright" style={{ paddingTop: "3px" }}>
+					&copy; 2024 RJ and Co.
+				</p>
+			</div>
 		</Box>
 	);
 };
