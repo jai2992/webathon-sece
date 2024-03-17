@@ -6,8 +6,11 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import './navbar.css'
 import { Link } from 'react-router-dom';
+import { useUser } from './UserContext';
+
 
 function NavScrollExample() {
+  const { userName } = useUser();
   return (
     <Navbar expand="lg" style={{borderRadius:'0px 0px 30px 30px',paddingLeft:'50px',paddingRight:'50px'}}>
       <Container fluid >
@@ -38,11 +41,12 @@ function NavScrollExample() {
           </Form>
           <div className="d-flex align-items-center ms-2">
             <img
-                src="https://via.placeholder.com/30"
-                alt="user"
+                src="https://i.pinimg.com/736x/64/81/22/6481225432795d8cdf48f0f85800cf66.jpg"
+                alt={userName}
                 className="rounded-circle me-2"
+                style={{height:'30px',width:'30px'}}
             />
-            <span className='user'>User Name</span>
+            <span className='user'>{userName}</span>
             </div>
         </Navbar.Collapse>
       </Container>

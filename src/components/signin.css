@@ -69,13 +69,22 @@
   }
   .signup-link {
   text-align: center;
-  margin-top: 20px; /* Adjust margin-top as needed */
-  position: absolute;
-  bottom: 20px; /* Adjust bottom position as needed */
+  margin-top: 20px;
+  position: relative;
+  bottom: 0px; 
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
 }
+.forgot-link {
+  text-align: left;
+  position: relative;
+  bottom: 10px; 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
 
 .signup-link p {
   font-size: 14px;
@@ -88,5 +97,13 @@
 }
 
 .signup-link a:hover {
+  text-decoration: underline;
+}
+.forgot-link a {
+  color: orange;
+  text-decoration: none;
+}
+
+.forgot-link a:hover {
   text-decoration: underline;
 }

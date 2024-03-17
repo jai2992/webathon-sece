@@ -8,12 +8,14 @@ import Saloon from './components/Saloon';
 import Cart from './components/cart';
 import Signin from './components/signin';
 import Signup from './components/signup';
+import { UserProvider } from './components/UserContext';
 
 function App() {
   return (
     // <PasswordLoginWithFirebase/>
     <div>
     <Router>
+    <UserProvider>
       <Routes>
         <Route path="" element={<Signin />} />
         <Route path="/" element={<Signin />} />
@@ -26,6 +28,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
 
       </Routes>
+    </UserProvider>
     </Router>
     </div>
   );
