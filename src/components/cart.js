@@ -19,6 +19,7 @@ import { useState, useEffect } from 'react';
 import CartItem from './cart_item';
 import { db } from './firebase';
 import { collection, getDocs , deleteDoc} from 'firebase/firestore';
+import { generateBill } from './billcomp';
 
 
 export default function Basic() {
@@ -94,6 +95,7 @@ export default function Basic() {
   const navigate = useNavigate();
 
   const handleProceed = () => {
+    generateBill();
     navigate('/signin');
 };
 
