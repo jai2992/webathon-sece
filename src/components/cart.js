@@ -20,6 +20,7 @@ import CartItem from './cart_item';
 import { db } from './firebase';
 import { collection, getDocs , deleteDoc} from 'firebase/firestore';
 import { generateBill } from './billcomp';
+import './loading.css'
 
 
 export default function Basic() {
@@ -72,7 +73,7 @@ export default function Basic() {
     // setCartItems(items);
     calculateTotalPrice(cartItems);
   };
-
+  const [isLoading, setIsLoading] = useState(false);
   const setItems =  async (itemId,quantityChange) => {
     setCartItems(prevItems =>
         prevItems.map(item =>
@@ -95,14 +96,27 @@ export default function Basic() {
   const navigate = useNavigate();
 
   const handleProceed = () => {
+    setIsLoading(true); // Show loading screen
+
     generateBill();
-    navigate('/signin');
+        // Simulate loading for 3 seconds
+        setTimeout(() => {
+            setIsLoading(false); // Hide loading screen
+            navigate('/signin');
+        }, 3000);
+
 };
 
 return (
 <section className="h-100 h-custom" style={{ backgroundImage: "./background.png" }}>
     <Nav/>
-    <MDBContainer className="py-5 h-100">
+                {/* Your loading screen */}
+                {isLoading && (
+                <div className="loading-screen">
+                    <img src="https://i.pinimg.com/originals/61/00/ab/6100abd8629af73f7e354794ccb28264.gif" alt="Loading..." />
+                </div>
+            )}
+                <MDBContainer className="py-5 h-100">
     <MDBRow className="justify-content-center align-items-center h-100">
         <MDBCol>
         <MDBCard>

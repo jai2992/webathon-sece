@@ -35,7 +35,7 @@ const CartProduct = ({ id }) => {
           <h4 style={{ alignSelf: 'flex-end',textAlign:'center', paddingTop: '25px', padding: '5px 5px' , marginBottom:"-10px",marginTop:"35px"}}>{product?.name}</h4>
           {/* <p style={{ paddingTop: '5px', padding: '5px 0px' }}>{product?.des}</p> */}
         </div>
-        <h5 style={{ alignSelf: 'flex-end',textAlign:'center',paddingRight:"40px",marginBottom:'20px' }}>INR {product?.price} /-</h5>
+        <h5 style={{ alignSelf: 'flex-end',textAlign:'center',paddingRight:"60px",marginBottom:'20px' }}>INR {product?.price} /-</h5>
       </div>
       <div style={{ flex: '1', padding: '10px', position: 'relative' }}>
         <img
