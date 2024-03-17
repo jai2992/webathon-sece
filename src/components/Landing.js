@@ -3,6 +3,8 @@ import Nav from './navbar'
 import './Landing.css'
 import Productbar from './product'
 import Footer from './footer'
+import { TypeAnimation } from 'react-type-animation';
+
 
 
 export default function Landing() {
@@ -10,7 +12,36 @@ export default function Landing() {
     <div>
         <Nav/>
         <div class='land'>
-          <p class='title'>Efficiency meets comfort with our Amenity Management System.</p>
+          {/* <p class='title'>Efficiency meets comfort with our Amenity Management System.</p> */}
+          <TypeAnimation
+          sequence={[
+            'Efficiency meets comfort with our Emporium',
+            3000, // wait 1s before replacing "Emporium" with "Parlor"
+            'Efficiency meets comfort with our Parlor',
+            3000,
+            'Efficiency meets comfort with our Bistro',
+            3000,
+            'Efficiency meets comfort with our Market',
+            3000,
+            'Efficiency meets comfort with our Lounge',
+            3000
+          ]}
+          
+      
+      
+      wrapper="span"
+      speed={10}
+      // class='title'
+      style={{
+        color: 'rgb(255, 153, 0)',
+        zIndex: 2,
+        fontWeight: 'bolder',
+        fontFamily: "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif",
+        fontSize: '60px',
+        display: 'inline-block',
+      }}
+      repeat={Infinity}
+    />
         </div>
         <div>
         <div className="container">
