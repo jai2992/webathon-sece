@@ -21,6 +21,7 @@ import { db } from './firebase';
 import { collection, getDocs , deleteDoc} from 'firebase/firestore';
 import BillComponent from "./bill";
 
+
 export default function Basic() {
     const [cartItems, setCartItems] = useState([]);
     const [totalPrice, setTotalPrice] = useState(0);
@@ -106,7 +107,7 @@ return (
         <MDBCard>
             <MDBCardBody className="p-4">
             <MDBRow>
-            <h2>Payment</h2>
+            <h2 style={{fontWeight:"bolder"}}>Payment</h2>
                 <MDBCol lg="7">
                 <MDBContainer>
                     {cartItems.map(item => (
@@ -137,7 +138,7 @@ return (
                         <QRCode
                             title="SECE PAYMENT"
                             value={`upi://pay?pa=jaiguru2992@okhdfcbank&pn=Jai%20guru&am=${totalPrice}.00&cu=INR&aid=uGICAgMDE16mMcg`}
-                            style={{padding:'5px'}}
+                            style={{padding:'5px',background:'white',borderRadius:'20px',padding:'10px'}}
                         />
                     )}
                     {/* <form className="mt-4">
