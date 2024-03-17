@@ -19,7 +19,6 @@ import { useState, useEffect } from 'react';
 import CartItem from './cart_item';
 import { db } from './firebase';
 import { collection, getDocs , deleteDoc} from 'firebase/firestore';
-import BillComponent from "./bill";
 
 
 export default function Basic() {
@@ -170,7 +169,6 @@ return (
                     <button color="info" variant="warning" block size="lg" className="btn btn-primary"  onClick={handleProceed}>
                         PROCEED !
                     </button>
-                    <BillComponent/>
                     </MDBCardBody>
                 </MDBCard>
                 </MDBContainer>

@@ -8,8 +8,8 @@ export default function FoodCourt() {
     <div>
     <Nav/>
     <br/><br/>
-    <h2 style={{margin:'30px 30px 30px 50px',fontWeight:'bolder'}}>Tiffin</h2>
-    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px', padding: '0px',alignSelf:'center',marginLeft:'50px', marginRight:'200px'}}>
+    <h2 style={{margin:'30px 30px 30px 120px',fontWeight:'bolder'}}>Tiffin</h2>
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px', padding: '0px',alignSelf:'center',marginLeft:'120px', marginRight:'200px'}}>
         <Productbar id="food 1"/>
         <Productbar id="food 2"/>
         <Productbar id="food 3"/>
@@ -17,8 +17,8 @@ export default function FoodCourt() {
         <Productbar id="food 5"/>
         <Productbar id="food 6"/>
     </div>
-    <h2 style={{margin:'30px 30px 30px 50px',fontWeight:'bolder'}}>Fast Food</h2>
-    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px', padding: '0px',alignSelf:'center',marginLeft:'50px', marginRight:'200px'}}>
+    <h2 style={{margin:'30px 30px 30px 120px',fontWeight:'bolder'}}>Fast Food</h2>
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px', padding: '0px',alignSelf:'center',marginLeft:'120px', marginRight:'200px'}}>
         <Productbar id="food 11"/>
         <Productbar id="food 12"/>
         <Productbar id="food 13"/>
@@ -26,8 +26,8 @@ export default function FoodCourt() {
         <Productbar id="food 15"/>
         <Productbar id="food 16"/>
     </div>
-    <h2 style={{margin:'30px 30px 30px 50px',fontWeight:'bolder'}}>Bakery Items</h2>
-    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px', padding: '0px',alignSelf:'center',marginLeft:'50px', marginRight:'200px'}}>
+    <h2 style={{margin:'30px 30px 30px 120px',fontWeight:'bolder'}}>Bakery Items</h2>
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px', padding: '0px',alignSelf:'center',marginLeft:'120px', marginRight:'200px'}}>
         <Productbar id="food 21"/>
         <Productbar id="food 22"/>
         <Productbar id="food 23"/>

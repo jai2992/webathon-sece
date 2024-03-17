@@ -8,8 +8,8 @@ export default function store() {
     <div>
     <Nav/>
     <br/><br/>
-    <h2 style={{margin:'30px 30px 30px 50px',fontWeight:'bolder'}}>Stationary</h2>
-    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px', padding: '0px',alignSelf:'center',marginLeft:'50px', marginRight:'200px'}}>
+    <h2 style={{margin:'30px 30px 30px 120px',fontWeight:'bolder'}}>Stationary</h2>
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px', padding: '0px',alignSelf:'center',marginLeft:'120px', marginRight:'200px'}}>
         <Productbar id="Store 1"/>
         <Productbar id="Store 2"/>
         <Productbar id="Store 3"/>
@@ -18,8 +18,8 @@ export default function store() {
         <Productbar id="Store 6"/>
         
     </div>
-    <h2 style={{margin:'30px 30px 30px 50px',fontWeight:'bolder'}}>Snacks</h2>
-    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px', padding: '0px',alignSelf:'center',marginLeft:'50px', marginRight:'200px'}}>
+    <h2 style={{margin:'30px 30px 30px 120px',fontWeight:'bolder'}}>Snacks</h2>
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px', padding: '0px',alignSelf:'center',marginLeft:'120px', marginRight:'200px'}}>
         <Productbar id="store 11"/>
         <Productbar id="store 12"/>
         <Productbar id="store 13"/>
@@ -27,8 +27,8 @@ export default function store() {
         <Productbar id="store 15"/>
         <Productbar id="store 16"/>
     </div>
-    <h2 style={{margin:'30px 30px 30px 50px',fontWeight:'bolder'}}>Essentials</h2>
-    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px', padding: '0px',alignSelf:'center',marginLeft:'50px', marginRight:'200px'}}>
+    <h2 style={{margin:'30px 30px 30px 120px',fontWeight:'bolder'}}>Essentials</h2>
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px', padding: '0px',alignSelf:'center',marginLeft:'120px', marginRight:'200px'}}>
         <Productbar id="store 21"/>
         <Productbar id="store 22"/>
         <Productbar id="store 23"/>
