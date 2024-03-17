@@ -73,8 +73,8 @@ export default function Landing() {
     <h4 className="center-heading">Frequently Ordered Items</h4>
     <br/> <br/><br/> <br/>
     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '30px', padding: '50px',alignContent:'center',marginLeft:'100px', marginRight:'200px',zIndex:'100'}}>
-        <Productbar id="1"/>
-        <Productbar id="1"/>
+        <Productbar id="food 4"/>
+        <Productbar id="store 12"/>
     </div>
     </div>
     <br/> <br/><br/> <br/>
