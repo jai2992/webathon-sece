@@ -25,7 +25,7 @@ function NavScrollExample() {
             <Nav.Link as={Link} to="/signin" style={{paddingRight:'20px'}}>Food Court</Nav.Link>
             <Nav.Link as={Link} to="/signin" style={{paddingRight:'20px'}}>Cart</Nav.Link>
           </Nav>
-          <Form className="d-flex" style={{paddingRight:'20px',fontWeight:'bold'}}>
+          {/* <Form className="d-flex" style={{paddingRight:'20px',fontWeight:'bold'}}>
             <Form.Control
               type="search"
               placeholder="Type the product name"
@@ -35,7 +35,7 @@ function NavScrollExample() {
 
             />
             <Button style={{background:'rgb(254, 190, 71)',borderRadius:'0px 10px 10px 0px',borderColor:'black',color:'black'}}>Search</Button>
-          </Form>
+          </Form> */}
           <div className="d-flex align-items-center ms-2">
             {/* <img
                 src="https://via.placeholder.com/30"
