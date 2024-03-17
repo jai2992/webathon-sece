@@ -16,7 +16,7 @@ import { useState, useEffect } from 'react';
 // import { MDBContainer, MDBRow, MDBCol } from 'mdb-react-ui-kit';
 import CartItem from './cart_item';
 import { db } from './firebase';
-import { collection, getDocs } from 'firebase/firestore';
+import { collection, getDocs , deleteDoc} from 'firebase/firestore';
 
 export default function Basic() {
     const [cartItems, setCartItems] = useState([]);
@@ -34,6 +34,17 @@ export default function Basic() {
     fetchCartItems();
   }, []);
 
+  const deleteCartItem = async (itemId) => {
+    try {
+      // Remove item from UI
+      setCartItems(cartItems.filter(item => item.id !== itemId));
+      // Remove item from database
+    //   await deleteDoc(db, 'items', itemId);
+    } catch (error) {
+      console.error('Error deleting item:', error);
+    }
+  };
+
 return (
 <section className="h-100 h-custom" style={{ backgroundImage: "./background.png" }}>
     <Nav/>
@@ -49,7 +60,7 @@ return (
                         item.quantity > 0 && (
                             <MDBRow key={item.id}>
                                 <MDBCol md="15">
-                                    <CartItem id={item.id} initialQuantity={item.quantity} />
+                                    <CartItem id={item.id} initialQuantity={item.quantity} onDelete={deleteCartItem}/>
                                 </MDBCol>
                             </MDBRow>
                         )
