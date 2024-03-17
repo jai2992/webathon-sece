@@ -4,17 +4,22 @@ import { addProductToCart } from './addproducttocart';
 import Product from './product';
 import CartProduct from './cartProduct';
 
-const CartItem = ({ id, initialQuantity, onDelete }) => {
+const CartItem = ({ id, initialQuantity, onDelete , updateTotalPrice , setItems }) => {
   const [itemQuantity, setItemQuantity] = useState(initialQuantity);
     const handleIncrease = () => {
       setItemQuantity(itemQuantity + 1);
       addProductToCart(id, 1); // Add 1 to the quantity of the product with this id in Firestore
+      setItems(id,+1) ;
+      
+      // updateTotalPrice();
     };
   
     const handleDecrease = () => {
-      if (itemQuantity > 0) {
+      if (itemQuantity > 1) {
         setItemQuantity(itemQuantity - 1);
         addProductToCart(id, -1); // Subtract 1 from the quantity of the product with this id in Firestore
+        setItems(id,-1) ;
+        // updateTotalPrice();
       }
     };
   

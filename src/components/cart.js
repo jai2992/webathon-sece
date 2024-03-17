@@ -20,13 +20,14 @@ import { collection, getDocs , deleteDoc} from 'firebase/firestore';
 
 export default function Basic() {
     const [cartItems, setCartItems] = useState([]);
-
+    const [totalPrice, setTotalPrice] = useState(0);
   useEffect(() => {
     const fetchCartItems = async () => {
       try {
         const querySnapshot = await getDocs(collection(db, 'items'));
         const items = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
         setCartItems(items);
+        calculateTotalPrice(items);
       } catch (error) {
         console.error('Error fetching cart items:', error);
       }
@@ -40,10 +41,43 @@ export default function Basic() {
       setCartItems(cartItems.filter(item => item.id !== itemId));
       // Remove item from database
     //   await deleteDoc(db, 'items', itemId);
+    // calculateTotalPrice(cartItems.filter(item => item.id !== itemId));
     } catch (error) {
       console.error('Error deleting item:', error);
     }
   };
+
+  const calculateTotalPrice = (items) => {
+    let total = 0;
+    items.forEach(item => {
+      total += Number(item.quantity) * Number(item.price);
+    //   console.log(item.price);
+    // console.log(typeof(item.price));
+    // console.log(typeof(item.quantity));
+
+    });
+    console.log("CALLED UPDATE");
+    console.log(total);
+    console.log(typeof(total));
+
+    setTotalPrice(total);
+  };
+  const updateTotalPrice = async () => {
+    // const querySnapshot =  await getDocs(collection(db, 'items'));
+    // const items = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+    // setCartItems(items);
+    calculateTotalPrice(cartItems);
+  };
+
+  const setItems =  async (itemId,quantityChange) => {
+    setCartItems(prevItems =>
+        prevItems.map(item =>
+          item.id === itemId ? { ...item, quantity: item.quantity + quantityChange } : item
+        )
+      );
+      calculateTotalPrice(cartItems);
+  }
+
 
 return (
 <section className="h-100 h-custom" style={{ backgroundImage: "./background.png" }}>
@@ -60,7 +94,7 @@ return (
                         item.quantity > 0 && (
                             <MDBRow key={item.id}>
                                 <MDBCol md="15">
-                                    <CartItem id={item.id} initialQuantity={item.quantity} onDelete={deleteCartItem}/>
+                                    <CartItem id={item.id} initialQuantity={item.quantity} onDelete={deleteCartItem} updateTotalPrice={updateTotalPrice} setItems={setItems}/>
                                 </MDBCol>
                             </MDBRow>
                         )
@@ -116,29 +150,18 @@ return (
                     <hr />
 
                     <div className="d-flex justify-content-between">
-                        <p className="mb-2">Subtotal</p>
-                        <p className="mb-2">$4798.00</p>
-                    </div>
+                  <p className="mb-2">Total</p>
+                  <p className="mb-2">${totalPrice}</p>
+                </div>
 
-                    <div className="d-flex justify-content-between">
-                        <p className="mb-2">Shipping</p>
-                        <p className="mb-2">$20.00</p>
-                    </div>
-
-                    <div className="d-flex justify-content-between">
-                        <p className="mb-2">Total(Incl. taxes)</p>
-                        <p className="mb-2">$4818.00</p>
-                    </div>
-
-                    <MDBBtn color="info" block size="lg">
-                        <div className="d-flex justify-content-between">
-                        <span>$4818.00</span>
+                    <button color="info" variant="warning" block size="lg" className="btn btn-warning">
+                        PROCEED !
+                        {/* <div className="d-flex justify-content-between">
                         <span>
                             Checkout{" "}
-                            <i className="fas fa-long-arrow-alt-right ms-2"></i>
                         </span>
-                        </div>
-                    </MDBBtn>
+                        </div> */}
+                    </button>
                     </MDBCardBody>
                 </MDBCard>
                 </MDBContainer>
