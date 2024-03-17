@@ -31,11 +31,11 @@ const Product = ({ id }) => {
   return (
     <div style={{ width: '400px', height: '200px', display: 'flex', boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',background:'rgba(255,255,255,0.9)', borderRadius: '10px',zIndex:'1' }}>
       <div style={{ flex: '1', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '10px' }}>
-        <div>
-          <h4 style={{ paddingTop: '5px', padding: '5px 5px' }}>{product?.name}</h4>
-          <p style={{ paddingTop: '5px', padding: '5px 0px' }}>{product?.des}</p>
+        <div style={{paddingLeft:'15px'}}>
+          <h5 style={{alignSelf:'center' ,marginTop:'25px',alignContent:'center',marginLeft:'0px', paddingTop: '5px' }}>{product?.name}</h5>
+          <p style={{ paddingTop: '5px', padding: '5px 0px',marginBottom:'0px' }}>{product?.des}</p>
         </div>
-        <h4 style={{ textAlign:'center' }}>INR {product?.price} /-</h4>
+        <h5 style={{ textAlign:'center', paddingTop:'-20px',marginBottom:'15px'}}>INR {product?.price} /-</h5>
       </div>
       <div style={{ flex: '1', padding: '10px', position: 'relative' }}>
         <img
@@ -49,13 +49,13 @@ const Product = ({ id }) => {
             position: 'absolute',
             bottom: '5%',
             right: '5%',
-            padding: '5px 10px',
+            padding: '5px 10px 0px 15px' ,
             borderRadius: '10px 0px 10px 0px',
             backgroundColor: 'rgba(255, 255, 255, 0.8)',
             color: 'black',
             border: 'none',
             cursor: 'pointer',
-            fontSize: '16px',
+            fontSize: '30px',
             fontWeight:'bolder'
             }}>+</button>
       </div>

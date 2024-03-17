@@ -14,4 +14,5 @@
 .loading-screen img {
     /* width: 100%; Adjust the width of the loading spinner */
     height: 600px; /* Adjust the height of the loading spinner */
+    /* filter: hue-rotate(10deg); */
 }
