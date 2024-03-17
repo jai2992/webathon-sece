@@ -35,7 +35,7 @@ const Product = ({ id }) => {
           <h4 style={{ paddingTop: '5px', padding: '5px 5px' }}>{product?.name}</h4>
           <p style={{ paddingTop: '5px', padding: '5px 0px' }}>{product?.des}</p>
         </div>
-        <h4 style={{ alignSelf: 'flex-end',textAlign:'center' }}>INR {product?.price} /-</h4>
+        <h4 style={{ textAlign:'center' }}>INR {product?.price} /-</h4>
       </div>
       <div style={{ flex: '1', padding: '10px', position: 'relative' }}>
         <img

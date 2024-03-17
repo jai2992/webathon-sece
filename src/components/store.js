@@ -18,23 +18,23 @@ export default function store() {
         <Productbar id="Store 6"/>
         
     </div>
-    <h2 style={{margin:'30px 30px 30px 50px',fontWeight:'bolder'}}>Biscuits</h2>
+    <h2 style={{margin:'30px 30px 30px 50px',fontWeight:'bolder'}}>Snacks</h2>
     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px', padding: '0px',alignSelf:'center',marginLeft:'50px', marginRight:'200px'}}>
-        <Productbar id="1"/>
-        <Productbar id="1"/>
-        <Productbar id="1"/>
-        <Productbar id="1"/>
-        <Productbar id="1"/>
-        <Productbar id="1"/>
+        <Productbar id="store 11"/>
+        <Productbar id="store 12"/>
+        <Productbar id="store 13"/>
+        <Productbar id="store 14"/>
+        <Productbar id="store 15"/>
+        <Productbar id="store 16"/>
     </div>
     <h2 style={{margin:'30px 30px 30px 50px',fontWeight:'bolder'}}>Essentials</h2>
     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px', padding: '0px',alignSelf:'center',marginLeft:'50px', marginRight:'200px'}}>
-        <Productbar id="1"/>
-        <Productbar id="1"/>
-        <Productbar id="1"/>
-        <Productbar id="1"/>
-        <Productbar id="1"/>
-        <Productbar id="1"/>
+        <Productbar id="store 21"/>
+        <Productbar id="store 22"/>
+        <Productbar id="store 23"/>
+        <Productbar id="store 24"/>
+        <Productbar id="store 25"/>
+        <Productbar id="store 26"/>
     </div>
     <br/><br/><br/>
     <Footer/>
