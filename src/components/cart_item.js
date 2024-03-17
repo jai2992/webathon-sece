@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { MDBCard, MDBCardBody } from 'mdb-react-ui-kit';
 import { addProductToCart } from './addproducttocart'; 
-import Product from './product';
+// import Product from './product';
 import CartProduct from './cartProduct';
 
 const CartItem = ({ id, initialQuantity, onDelete , updateTotalPrice , setItems }) => {

@@ -10,10 +10,12 @@ import {
     MDBRow,
     MDBTypography,
     } from "mdb-react-ui-kit";
+
+import QRCode from 'react-qr-code';
+import { useNavigate } from 'react-router-dom';
 import React from "react";
 import Nav from './navbar'
 import { useState, useEffect } from 'react';
-// import { MDBContainer, MDBRow, MDBCol } from 'mdb-react-ui-kit';
 import CartItem from './cart_item';
 import { db } from './firebase';
 import { collection, getDocs , deleteDoc} from 'firebase/firestore';
@@ -77,7 +79,22 @@ export default function Basic() {
       );
       calculateTotalPrice(cartItems);
   }
+  const [showQRCode, setShowQRCode] = useState(false);
 
+  useEffect(() => {
+      const timer = setTimeout(() => {
+          setShowQRCode(true);
+      }, 2000);
+
+      return () => clearTimeout(timer);
+  }, []);
+
+
+  const navigate = useNavigate();
+
+  const handleProceed = () => {
+    navigate('/signin');
+};
 
 return (
 <section className="h-100 h-custom" style={{ backgroundImage: "./background.png" }}>
@@ -88,6 +105,7 @@ return (
         <MDBCard>
             <MDBCardBody className="p-4">
             <MDBRow>
+            <h2>Payment</h2>
                 <MDBCol lg="7">
                 <MDBContainer>
                     {cartItems.map(item => (
@@ -104,31 +122,24 @@ return (
 
                 <MDBCol lg="5">
                 <MDBContainer>
-                <MDBCard className="bg-primary text-white rounded-3">
+                <MDBCard style={{background:'orange'}}>
                     <MDBCardBody>
                     <div className="d-flex justify-content-between align-items-center mb-4">
                         <MDBTypography tag="h5" className="mb-0">
-                        Card details
+                        Amount (Id)
                         </MDBTypography>
-                        <MDBCardImage src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-6.webp"
-                        fluid className="rounded-3" style={{ width: "45px" }} alt="Avatar" />
+                        <p>INR 5001/-</p>
                     </div>
 
-                    <p className="small">Card type</p>
-                    <a href="#!" type="submit" className="text-white">
-                        <MDBIcon fab icon="cc-mastercard fa-2x me-2" />
-                    </a>
-                    <a href="#!" type="submit" className="text-white">
-                        <MDBIcon fab icon="cc-visa fa-2x me-2" />
-                    </a>
-                    <a href="#!" type="submit" className="text-white">
-                        <MDBIcon fab icon="cc-amex fa-2x me-2" />
-                    </a>
-                    <a href="#!" type="submit" className="text-white">
-                        <MDBIcon fab icon="cc-paypal fa-2x me-2" />
-                    </a>
-
-                    <form className="mt-4">
+                    <p className="small">Scan to pay</p>
+                    {showQRCode && (
+                        <QRCode
+                            title="SECE PAYMENT"
+                            value={`upi://pay?pa=jaiguru2992@okhdfcbank&pn=Jai%20guru&am=${totalPrice}.00&cu=INR&aid=uGICAgMDE16mMcg`}
+                            style={{padding:'5px'}}
+                        />
+                    )}
+                    {/* <form className="mt-4">
                         <MDBInput className="mb-4" label="Cardholder's Name" type="text" size="lg"
                         placeholder="Cardholder's Name" contrast />
 
@@ -145,22 +156,17 @@ return (
                             maxLength="3" placeholder="&#9679;&#9679;&#9679;" contrast />
                         </MDBCol>
                         </MDBRow>
-                    </form>
+                    </form> */}
 
                     <hr />
 
                     <div className="d-flex justify-content-between">
                   <p className="mb-2">Total</p>
-                  <p className="mb-2">${totalPrice}</p>
+                  <p className="mb-2">INR {totalPrice}/-</p>
                 </div>
 
-                    <button color="info" variant="warning" block size="lg" className="btn btn-warning">
+                    <button color="info" variant="warning" block size="lg" className="btn btn-primary"  onClick={handleProceed}>
                         PROCEED !
-                        {/* <div className="d-flex justify-content-between">
-                        <span>
-                            Checkout{" "}
-                        </span>
-                        </div> */}
                     </button>
                     </MDBCardBody>
                 </MDBCard>

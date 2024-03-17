@@ -9,6 +9,7 @@ import Cart from './components/cart';
 import Signin from './components/signin';
 import Signup from './components/signup';
 import { UserProvider } from './components/UserContext';
+import Landing_b from './components/Landing_b';
 
 function App() {
   return (
@@ -17,8 +18,8 @@ function App() {
     <Router>
     <UserProvider>
       <Routes>
-        <Route path="" element={<Signin />} />
-        <Route path="/" element={<Signin />} />
+        <Route path="" element={<Landing_b />} />
+        <Route path="/" element={<Landing_b />} />
         <Route path="/Signin" element={<Signin />} />
         <Route path="/Signup" element={<Signup />} />
         <Route path="/land" element={<Landing />} />
