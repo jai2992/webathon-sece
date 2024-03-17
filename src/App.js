@@ -15,7 +15,7 @@ function App() {
   return (
     // <PasswordLoginWithFirebase/>
     <div>
-    <Router>
+    <Router basename="/webathon-sece">
     <UserProvider>
       <Routes>
         <Route path="" element={<Landing_b />} />
