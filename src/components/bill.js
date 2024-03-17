@@ -32,46 +32,56 @@ const BillComponent = () => {
 
   const generateBill = () => {
     const doc = new jsPDF();
-    let y = 20; // Initial y position
-
+    let y = 50; // Initial y position
+  
     // Header
     const date = new Date().toLocaleDateString();
     const time = new Date().toLocaleTimeString();
-    doc.setFontSize(12);
-    doc.text('Invoice', 100, y, 'center');
-    doc.text(`Date: ${date}  Time: ${time}`, 100, y + 10, 'center');
+    doc.setFontSize(14);
+    doc.text('Invoice', 105, y - 30, 'center');
+    doc.setFontSize(10);
+    doc.text(`Date: ${date}  Time: ${time}`, 105, y - 20, 'center');
     y += 20; // Increase y position for next line
-
+  
     // Add bill content
     doc.setFontSize(10);
+    doc.text('Item', 25, y);
+    doc.text('Price', 80, y); // Adjusted position for the new column
+    doc.text('Quantity', 120, y); // Adjusted position for the new column
+    doc.text('Total', 160, y); // Adjusted position for the new column
+    y += 8; // Increase y position for next line
+    doc.line(10, y, 200, y); // Horizontal line
+    y += 5; // Increase y position for next line
+  
     items.forEach(item => {
       // Draw rows
-      doc.line(10, y-5 , 200, y-5 ); // Horizontal line
-      doc.text(`${item.name}`, 15, y);
-      doc.line(90, y - 2, 90, y + 8); // Vertical line
-      doc.text(`$${item.price}`, 95, y);
-      doc.line(150, y - 2, 150, y + 8); // Vertical line
-      doc.text(`${item.quantity}`, 155, y);
-      doc.line(10, y + 8, 200, y + 8); // Horizontal line
-
-      y += 10; // Increase y position for next line
+      const totalPrice = item.price * item.quantity; // Calculate total amount
+      doc.text(item.name, 25, y);
+      doc.text(`INR ${item.price}`, 80, y); // Adjusted position for the new column
+      doc.text(item.quantity.toString(), 120, y); // Adjusted position for the new column
+      doc.text(`INR ${totalPrice}`, 160, y); // Adjusted position for the new column
+  
+      y += 8; // Increase y position for next line
+      doc.line(10, y, 200, y); // Horizontal line
+      y += 5; // Increase y position for next line
     });
-
+  
     // Total sum
-    y += 10;
-    doc.line(10, y - 2, 200, y - 2); // Horizontal line
-    doc.text('Total:', 145, y);
-    doc.text(`$${totalSum}`, 180, y);
-    doc.line(10, y + 5, 200, y + 5); // Horizontal line
-
-    // Footer
-    doc.line(10, 280, 200, 280); // Horizontal line
-    doc.setFontSize(8);
-    doc.text('Thank you for your purchase!', 100, 285, 'center');
-
+    y += 5;
+    doc.line(10, y, 200, y); // Horizontal line
+    doc.text('Total:', 100, y + 10);
+    doc.text(`Rs . ${totalSum} /- `, 160, y + 10);
+    y += 20; // Increase y position for next section
+  
+    // Add more content for enhancement
+    doc.text('Thank you for your purchase!', 105, y + 10, 'center');
+    doc.text('Visit again!', 105, y + 20, 'center');
+  
     // Save the PDF
     doc.save('bill.pdf');
   };
+  
+  
 
   return (
     <div>
