@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/webathon-sece/static/css/main.260b6495.css",
-    "main.js": "/webathon-sece/static/js/main.1827b4e1.js",
+    "main.js": "/webathon-sece/static/js/main.bf289b20.js",
     "static/js/239.888526ee.chunk.js": "/webathon-sece/static/js/239.888526ee.chunk.js",
     "static/js/213.d01d0f9d.chunk.js": "/webathon-sece/static/js/213.d01d0f9d.chunk.js",
     "static/js/732.faaa7507.chunk.js": "/webathon-sece/static/js/732.faaa7507.chunk.js",
@@ -10,7 +10,7 @@
     "static/media/signbg1.png": "/webathon-sece/static/media/signbg1.892fd1c05c4ed6c45bb6.png",
     "index.html": "/webathon-sece/index.html",
     "main.260b6495.css.map": "/webathon-sece/static/css/main.260b6495.css.map",
-    "main.1827b4e1.js.map": "/webathon-sece/static/js/main.1827b4e1.js.map",
+    "main.bf289b20.js.map": "/webathon-sece/static/js/main.bf289b20.js.map",
     "239.888526ee.chunk.js.map": "/webathon-sece/static/js/239.888526ee.chunk.js.map",
     "213.d01d0f9d.chunk.js.map": "/webathon-sece/static/js/213.d01d0f9d.chunk.js.map",
     "732.faaa7507.chunk.js.map": "/webathon-sece/static/js/732.faaa7507.chunk.js.map",
@@ -18,6 +18,6 @@
   },
   "entrypoints": [
     "static/css/main.260b6495.css",
-    "static/js/main.1827b4e1.js"
+    "static/js/main.bf289b20.js"
   ]
 }
