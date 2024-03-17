@@ -51,17 +51,17 @@ export default function Landing() {
       
       <div className="circle-container">
         <div className="circle">
-          <img src='https://d4t7t8y8xqo0t.cloudfront.net/resized/720X480/restaurant%2F690852%2Frestaurant020230923111214.png' alt="Image 1"/>
+          <img src='https://d4t7t8y8xqo0t.cloudfront.net/resized/720X480/restaurant%2F690852%2Frestaurant020230923111214.png' alt="HImage"/>
           <p>Order Now, taste <br/>
             happiness in every dish...</p>
         </div>
         <div className="circle">
-          <img src="https://static.toiimg.com/photo/53490136.cms" alt="Image 2" />
+          <img src="https://static.toiimg.com/photo/53490136.cms" alt="GImage 2" />
           <p>Enhance your aura,<br/>
              with a haircut and spa allure...</p>
         </div>
         <div className="circle">
-          <img src="https://media.istockphoto.com/id/485725200/photo/school-and-office-accessories-on-wooden-background.jpg?b=1&s=612x612&w=0&k=20&c=ZPKbyKvfLH_xgHYxhXaPKz-lBJxT5g2g04jZFx4LHXk=" alt="Image 3" />
+          <img src="https://media.istockphoto.com/id/485725200/photo/school-and-office-accessories-on-wooden-background.jpg?b=1&s=612x612&w=0&k=20&c=ZPKbyKvfLH_xgHYxhXaPKz-lBJxT5g2g04jZFx4LHXk=" alt="BImage 3" />
           <p>From notes to novel,<br/> let your words find home...</p>
         </div>
       </div>

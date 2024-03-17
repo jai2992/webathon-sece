@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { db } from './firebase';
-import { doc, getDoc, updateDoc } from 'firebase/firestore';
+import { doc, getDoc} from 'firebase/firestore';
 
 const CartProduct = ({ id }) => {
   const [product, setProduct] = useState(null);
-  const [quantity, setQuantity] = useState(0);
+  // const [quantity, setQuantity] = useState(0);
   useEffect(() => {
     const fetchProduct = async () => {
       const docRef = doc(db, 'items', id);
@@ -19,14 +19,14 @@ const CartProduct = ({ id }) => {
     fetchProduct();
   }, [id]);
 
-  const handleIncrement = async () => {
-    const newQuantity = quantity + 1;
-    setQuantity(newQuantity);
+  // const handleIncrement = async () => {
+  //   const newQuantity = quantity + 1;
+  //   setQuantity(newQuantity);
 
-    // Update the quantity in the Firestore database
-    const docRef = doc(db, 'items', id);
-    await updateDoc(docRef, { quantity: newQuantity });
-  };
+  //   // Update the quantity in the Firestore database
+  //   const docRef = doc(db, 'items', id);
+  //   await updateDoc(docRef, { quantity: newQuantity });
+  // };
 
   return (
     <div style={{ width: '500px', height: '150px', display: 'flex', boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',background:'rgba(255,255,255,0.9)', borderRadius: '10px',zIndex:'1',marginRight:"20px" }}>

@@ -1,12 +1,8 @@
 import {
-    MDBBtn,
     MDBCard,
     MDBCardBody,
-    MDBCardImage,
     MDBCol,
     MDBContainer,
-    MDBIcon,
-    MDBInput,
     MDBRow,
     MDBTypography,
     } from "mdb-react-ui-kit";
@@ -18,7 +14,7 @@ import Nav from './navbar'
 import { useState, useEffect } from 'react';
 import CartItem from './cart_item';
 import { db } from './firebase';
-import { collection, getDocs , deleteDoc} from 'firebase/firestore';
+import { collection, getDocs } from 'firebase/firestore';
 import { generateBill } from './billcomp';
 import './loading.css'
 
@@ -40,7 +36,7 @@ export default function Basic() {
     fetchCartItems();
   }, []);
 
-  const deleteCartItem = async (itemId) => {
+  const deleteCartItem =  (itemId) => {
     try {
       // Remove item from UI
       setCartItems(cartItems.filter(item => item.id !== itemId));
@@ -66,22 +62,34 @@ export default function Basic() {
     console.log(typeof(total));
 
     setTotalPrice(total);
+    setTotalPrice(total);
   };
-  const updateTotalPrice = async () => {
+  const updateTotalPrice =  () => {
     // const querySnapshot =  await getDocs(collection(db, 'items'));
     // const items = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
     // setCartItems(items);
     calculateTotalPrice(cartItems);
+    calculateTotalPrice(cartItems);
   };
   const [isLoading, setIsLoading] = useState(false);
-  const setItems =  async (itemId,quantityChange) => {
+
+  const setItems = async (itemId, quantityChange) => {
     setCartItems(prevItems =>
-        prevItems.map(item =>
-          item.id === itemId ? { ...item, quantity: item.quantity + quantityChange } : item
-        )
-      );
-      calculateTotalPrice(cartItems);
-  }
+      prevItems.map(item =>
+        item.id === itemId ? { ...item, quantity: item.quantity + quantityChange } : item
+      )
+    );
+  };
+  
+  useEffect(() => {
+    // Calculate total price based on updated quantities
+    let total = 0;
+    cartItems.forEach(item => {
+      total += Number(item.quantity) * Number(item.price);
+    });
+    setTotalPrice(total);
+  }, [cartItems]);
+  
   const [showQRCode, setShowQRCode] = useState(false);
 
   useEffect(() => {
@@ -113,7 +121,7 @@ return (
                 {/* Your loading screen */}
                 {isLoading && (
                 <div className="loading-screen">
-                    <img src="https://i.pinimg.com/originals/61/00/ab/6100abd8629af73f7e354794ccb28264.gif" alt="Loading..." />
+                    <img src="https://i.pinimg.com/originals/1a/25/d4/1a25d431e3878b587a8275a3968a1bd0.gif" alt="Loading..." />
                 </div>
             )}
                 <MDBContainer className="py-5 h-100">
@@ -142,18 +150,18 @@ return (
                 <MDBCard style={{background:'orange'}}>
                     <MDBCardBody>
                     <div className="d-flex justify-content-between align-items-center mb-4">
-                        <MDBTypography tag="h5" className="mb-0">
+                        <MDBTypography tag="h4" className="mb-0">
                         Amount (Id)
                         </MDBTypography>
-                        <p>INR 5001/-</p>
+                        <h5>Bal : INR 5001/-</h5>
                     </div>
 
-                    <p className="small">Scan to pay</p>
+                    <h5 className="small">Scan to pay</h5>
                     {showQRCode && (
                         <QRCode
                             title="SECE PAYMENT"
                             value={`upi://pay?pa=jaiguru2992@okhdfcbank&pn=Jai%20guru&am=${totalPrice}.00&cu=INR&aid=uGICAgMDE16mMcg`}
-                            style={{padding:'5px',background:'white',borderRadius:'20px',padding:'10px'}}
+                            style={{background:'white',borderRadius:'20px',padding:'10px'}}
                         />
                     )}
                     {/* <form className="mt-4">
@@ -178,8 +186,8 @@ return (
                     <hr />
 
                     <div className="d-flex justify-content-between">
-                  <p className="mb-2">Total</p>
-                  <p className="mb-2">INR {totalPrice}/-</p>
+                  <h5 className="mb-2">Total</h5>
+                  <h5 className="mb-2">INR {totalPrice}/-</h5>
                 </div>
 
                     <button color="info" variant="warning" block size="lg" className="btn btn-primary"  onClick={handleProceed}>

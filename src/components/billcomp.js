@@ -1,5 +1,5 @@
 // BillComponent.js
-import React, { useEffect, useState } from 'react';
+// import React, { useEffect, useState } from 'react';
 import jsPDF from 'jspdf';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from './firebase';
