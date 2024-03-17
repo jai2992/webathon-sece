@@ -1,12 +1,8 @@
 import {
-    MDBBtn,
     MDBCard,
     MDBCardBody,
-    MDBCardImage,
     MDBCol,
     MDBContainer,
-    MDBIcon,
-    MDBInput,
     MDBRow,
     MDBTypography,
     } from "mdb-react-ui-kit";
@@ -18,7 +14,7 @@ import Nav from './navbar'
 import { useState, useEffect } from 'react';
 import CartItem from './cart_item';
 import { db } from './firebase';
-import { collection, getDocs , deleteDoc} from 'firebase/firestore';
+import { collection, getDocs } from 'firebase/firestore';
 import { generateBill } from './billcomp';
 import './loading.css'
 
@@ -165,7 +161,7 @@ return (
                         <QRCode
                             title="SECE PAYMENT"
                             value={`upi://pay?pa=jaiguru2992@okhdfcbank&pn=Jai%20guru&am=${totalPrice}.00&cu=INR&aid=uGICAgMDE16mMcg`}
-                            style={{padding:'5px',background:'white',borderRadius:'20px',padding:'10px'}}
+                            style={{background:'white',borderRadius:'20px',padding:'10px'}}
                         />
                     )}
                     {/* <form className="mt-4">
