@@ -9,7 +9,6 @@ function HomeScreen(){
     const handleClick = () =>{
         signOut(database).then(() => {
             console.log("User signed out successfully");
-            // Redirect user to the desired route after signing out
             history('/');
         }).catch(error => {
             console.error("Error signing out:", error);

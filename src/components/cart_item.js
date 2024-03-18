@@ -25,9 +25,8 @@ const CartItem = ({ id, initialQuantity, onDelete , updateTotalPrice , setItems 
   
     const handleDelete = () => {
       if (itemQuantity > 0) {
-        // setItemQuantity(itemQuantity - 1);
-        onDelete(id); // Call the delete function with the id of the item to be deleted
-        addProductToCart(id, - itemQuantity); // Subtract 1 from the quantity of the product with this id in Firestore
+        onDelete(id);
+        addProductToCart(id, - itemQuantity);
       }
     };
   
@@ -36,7 +35,6 @@ const CartItem = ({ id, initialQuantity, onDelete , updateTotalPrice , setItems 
         <MDBCardBody>
           <div className="d-flex justify-content-between">
             <div className="d-flex flex-row align-items-center">
-              {/* Assuming Product is a component to display product details */}
               <CartProduct id={id} />
               <div className="ml-3">
                 <button className="btn btn-primary btn-sm" onClick={handleDecrease}>-</button>
@@ -48,7 +46,7 @@ const CartItem = ({ id, initialQuantity, onDelete , updateTotalPrice , setItems 
               src={'https://cdn-icons-png.flaticon.com/512/6861/6861362.png'}
               alt="Delete"
               style={{ cursor: 'pointer', height: '32px', marginLeft: '20px' }}
-              onClick={handleDelete} // Call handleDelete function when clicked
+              onClick={handleDelete}
             />
           </div>
             </div>

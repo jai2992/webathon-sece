@@ -29,7 +29,6 @@ export default function Signup() {
         email: email,
         password: password,
       });
-      // alert("User created successfully");
       navigate('/signin');
 
     } catch (error) {
@@ -41,7 +40,6 @@ export default function Signup() {
     <div className="signin-container">
       <div className="background-image"></div>
       <div className="signin-form">
-        {/* Signup form with name, email, password, and confirm password */}
         <form onSubmit={handleSubmit}>
           <h2 className='title'>Sign up</h2>
           <label>Name:</label>
