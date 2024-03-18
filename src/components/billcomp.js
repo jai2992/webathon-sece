@@ -54,5 +54,7 @@ export const generateBill = async () => {
   doc.save('bill.pdf');
 };
 
+const BillComponent = () => {
+};
 
 export default BillComponent;
