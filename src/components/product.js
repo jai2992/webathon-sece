@@ -29,10 +29,10 @@ const Product = ({ id }) => {
   };
 
   return (
-    <div style={{ width: '400px', height: '200px', display: 'flex', boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',background:'rgba(255,255,255,0.9)', borderRadius: '10px',zIndex:'1' }}>
+    <div style={{ width: '400px', height: '200px', display: 'flex', boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',background:'rgba(255,255,255,0.9)', borderRadius: '10px',zIndex:'1'}}>
       <div style={{ flex: '1', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '10px' }}>
         <div style={{paddingLeft:'15px'}}>
-          <h5 style={{alignSelf:'center' ,marginTop:'25px',alignContent:'center',marginLeft:'0px', paddingTop: '5px' }}>{product?.name}</h5>
+          <h5 style={{alignSelf:'center' ,marginTop:'25px',alignContent:'center',marginLeft:'0px', paddingTop: '5px',fontWeight:'bolder' }}>{product?.name}</h5>
           <p style={{ paddingTop: '5px', padding: '5px 0px',marginBottom:'0px' }}>{product?.des}</p>
         </div>
         <h5 style={{ textAlign:'center', paddingTop:'-20px',marginBottom:'15px'}}>INR {product?.price} /-</h5>

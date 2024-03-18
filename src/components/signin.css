@@ -107,3 +107,8 @@
 .forgot-link a:hover {
   text-decoration: underline;
 }
+@media screen and (max-width: 800px) {
+  .background-image {
+    display: none;
+  }
+}
