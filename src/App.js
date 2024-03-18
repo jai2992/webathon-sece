@@ -14,7 +14,7 @@ import LandingB from './components/Landing_b';
 function App() {
   return (
     <div>
-    <Router>
+    <Router basename="/webathon-sece">
     <UserProvider>
       <Routes>
         <Route path="" element={<LandingB />} />
