@@ -22,7 +22,7 @@ const Product = ({ id }) => {
   const handleIncrement = async () => {
     const newQuantity = quantity + 1;
     setQuantity(newQuantity);
-
+    alert("Item added to cart.")
     // Update the quantity in the Firestore database
     const docRef = doc(db, 'items', id);
     await updateDoc(docRef, { quantity: newQuantity });
