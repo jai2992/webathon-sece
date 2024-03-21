@@ -13,7 +13,7 @@ export default function Landing_b() {
         <TypeAnimation
           sequence={[
             'Efficiency meets comfort with our Emporium',
-            3000, // wait 1s before replacing "Emporium" with "Parlor"
+            3000,
             'Efficiency meets comfort with our Parlor',
             3000,
             'Efficiency meets comfort with our Bistro',
@@ -28,7 +28,6 @@ export default function Landing_b() {
       
       wrapper="span"
       speed={10}
-      // class='title'
       style={{
         color: 'rgb(255, 153, 0)',
         zIndex: 2,
@@ -65,18 +64,6 @@ export default function Landing_b() {
     </div>
     <br/> <br/><br/> <br/>
     <br/>
-    {/* <div class='land'>
-    <div className="container" style={{color:'orange'}}>
-    <h4 className="center-heading">Frequently Ordered Items</h4>
-    <br/> <br/><br/> <br/>
-    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '30px', padding: '50px',alignContent:'center',marginLeft:'100px', marginRight:'200px',zIndex:'100'}}>
-        <Productbar id="1"/>
-        <Productbar id="1"/>
-    </div>
-    </div>
-    <br/> <br/><br/> <br/>
-
-    </div> */}
   
     </div>
     <Footer/>

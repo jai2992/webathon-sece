@@ -22,7 +22,7 @@ function RegisterAndLogin() {
         })
         .catch((err) => {
           console.error(err);
-          alert("Failed to sign up. Please try again."); // Provide a user-friendly error message
+          alert("Failed to sign up. Please try again.");
           setLogin(true);
         });
     } else {
@@ -33,7 +33,7 @@ function RegisterAndLogin() {
         })
         .catch((err) => {
           console.error(err);
-          alert("Failed to sign in. Please check your credentials."); // Provide a user-friendly error message
+          alert("Failed to sign in. Please check your credentials.");
         });
     }
   };

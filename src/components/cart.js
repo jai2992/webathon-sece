@@ -40,11 +40,7 @@ export default function Basic() {
 
   const deleteCartItem =  (itemId) => {
     try {
-      // Remove item from UI
       setCartItems(cartItems.filter(item => item.id !== itemId));
-      // Remove item from database
-    //   await deleteDoc(db, 'items', itemId);
-    // calculateTotalPrice(cartItems.filter(item => item.id !== itemId));
     } catch (error) {
       console.error('Error deleting item:', error);
     }
@@ -54,10 +50,6 @@ export default function Basic() {
     let total = 0;
     items.forEach(item => {
       total += Number(item.quantity) * Number(item.price);
-    //   console.log(item.price);
-    // console.log(typeof(item.price));
-    // console.log(typeof(item.quantity));
-
     });
     console.log("CALLED UPDATE");
     console.log(total);
@@ -67,9 +59,6 @@ export default function Basic() {
     setTotalPrice(total);
   };
   const updateTotalPrice =  () => {
-    // const querySnapshot =  await getDocs(collection(db, 'items'));
-    // const items = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-    // setCartItems(items);
     calculateTotalPrice(cartItems);
     calculateTotalPrice(cartItems);
   };
@@ -84,7 +73,6 @@ export default function Basic() {
   };
   
   useEffect(() => {
-    // Calculate total price based on updated quantities
     let total = 0;
     cartItems.forEach(item => {
       total += Number(item.quantity) * Number(item.price);
@@ -112,9 +100,9 @@ export default function Basic() {
     });
 
     generateBill();
-        // Simulate loading for 3 seconds
+        
         setTimeout(() => {
-            setIsLoading(false); // Hide loading screen
+            setIsLoading(false);
             navigate('/signin');
         }, 3000);
 
@@ -123,7 +111,6 @@ export default function Basic() {
 return (
 <section className="h-100 h-custom" style={{ backgroundImage: "./background.png" }}>
     <Nav/>
-                {/* Your loading screen */}
                 {isLoading && (
                 <div className="loading-screen">
                     <img src="https://i.pinimg.com/originals/1a/25/d4/1a25d431e3878b587a8275a3968a1bd0.gif" alt="Loading..." />
@@ -169,24 +156,7 @@ return (
                             style={{background:'white',borderRadius:'20px',padding:'10px'}}
                         />
                     )}
-                    {/* <form className="mt-4">
-                        <MDBInput className="mb-4" label="Cardholder's Name" type="text" size="lg"
-                        placeholder="Cardholder's Name" contrast />
-
-                        <MDBInput className="mb-4" label="Card Number" type="text" size="lg"
-                        minLength="19" maxLength="19" placeholder="1234 5678 9012 3457" contrast />
-
-                        <MDBRow className="mb-4">
-                        <MDBCol md="6">
-                            <MDBInput className="mb-4" label="Expiration" type="text" size="lg"
-                            minLength="7" maxLength="7" placeholder="MM/YYYY" contrast />
-                        </MDBCol>
-                        <MDBCol md="6">
-                            <MDBInput className="mb-4" label="Cvv" type="text" size="lg" minLength="3"
-                            maxLength="3" placeholder="&#9679;&#9679;&#9679;" contrast />
-                        </MDBCol>
-                        </MDBRow>
-                    </form> */}
+                
 
                     <hr />
 

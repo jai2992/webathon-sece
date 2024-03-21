@@ -13,7 +13,6 @@ import LandingB from './components/Landing_b';
 
 function App() {
   return (
-    // <PasswordLoginWithFirebase/>
     <div>
     <Router basename="/webathon-sece">
     <UserProvider>

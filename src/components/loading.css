@@ -4,15 +4,13 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    background-color: rgba(255, 255, 255, 0.8); 
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999; /* Ensure it's above everything else */
+    z-index: 9999;
 }
 
 .loading-screen img {
-    /* width: 100%; Adjust the width of the loading spinner */
-    height: 600px; /* Adjust the height of the loading spinner */
-    /* filter: hue-rotate(10deg); */
+    height: 600px; 
 }
