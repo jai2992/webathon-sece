@@ -16,7 +16,9 @@ import CartItem from './cart_item';
 import { db } from './firebase';
 import { collection, getDocs } from 'firebase/firestore';
 import { generateBill } from './billcomp';
-import './loading.css'
+import './loading.css' ;
+import { addProductToCart } from './addproducttocart'; 
+
 
 
 export default function Basic() {
@@ -105,6 +107,9 @@ export default function Basic() {
 
   const handleProceed = () => {
     setIsLoading(true); // Show loading screen
+    cartItems.forEach(item => {
+      addProductToCart(item.id, - item.quantity);
+    });
 
     generateBill();
         // Simulate loading for 3 seconds
